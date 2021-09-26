@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Card type</th>
+      <th>Card name</th>
+      <th>Card status</th>
+      <th>Card detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let card of banlist">
+      <td>{{ card.card_type }}</td>
+      <td><a href="{{ card.card_link }}">{{ card.card_name }}</a></td>
+      <td>{{ card.card_status }}</td>
+      <td>{{ card.card_detail }}</td>
+    </tr>
+  </tbody>
+</table>
