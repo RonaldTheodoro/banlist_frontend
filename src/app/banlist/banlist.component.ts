@@ -12,7 +12,15 @@ export class BanlistComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getBanlist().subscribe((banlist) => this.banlist = banlist)
+    this.getBanlist();
+  }
+
+  getBanlist() {
+    this.api.getBanlist().subscribe(
+      data => { this.banlist = data },
+      err => console.error(err),
+      () => console.log('done loading banlist')
+    )
   }
 
 }

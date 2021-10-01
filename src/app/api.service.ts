@@ -8,7 +8,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  public getBanlist(){
-    return this.http.get('http://localhost:5000/');
+  public getBanlist() {
+    return this.http.get('http://localhost:5000/api');
   }
 }
